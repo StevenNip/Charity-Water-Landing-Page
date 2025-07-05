@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity:Water Landing Page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Proxima Nova', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #fff7e1;
+      position: relative;
+      z-index: 10;
+    }
+
+    .navbar .logo img {
+      height: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .nav-links a.cta {
+      background-color: #ffc907;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      color: #000;
+    }
+
+    .hero {
+      position: relative;
+      height: calc(100vh - 80px);
+      background:url('../img/charity-water-background.jpg') no-repeat center center/cover;
+    }
+
+    .triangle-top-left, .triangle-bottom-right {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      z-index: 1;
+    }
+
+    .triangle-top-left {
+      top: 0;
+      left: 0;
+      border-width: 200px 200px 0 0;
+      border-color: #003366 transparent transparent transparent;
+    }
+
+    .triangle-bottom-right {
+      bottom: 0;
+      right: 0;
+      border-width: 0 0 200px 200px;
+      border-color: transparent transparent #003366 transparent;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 20%;
+      left: 5%;
+      z-index: 5;
+      color: #fff7e1;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-left: 10px solid #003366;
+      max-width: 500px;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #fff7e1;
+    }
+
+    .hero-content p {
+      font-size: 1.25rem;
+      color: #fff7e1;
+    }
+
+    /* Media query for small devices (phones) */
+    @media (max-width: 768px) {
+      /* Explanation: Stack nav links vertically on smaller screens */
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      /* Explanation: Reduce font sizes for better mobile readability */
+      .hero-content h1 {
+        font-size: 1.5rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      /* Explanation: Adjust hero padding/margins if needed */
+      .hero-content {
+        left: 3%;
+        padding: 1.5rem;
+      }
+    }
+
+    /* Media query for very small devices (e.g., older phones) */
+    @media (max-width: 480px) {
+      .hero-content {
+        max-width: 90%;
+        padding: 1rem;
+      }
+
+      .nav-links a.cta {
+        padding: 0.4rem 0.8rem;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../img/cw_logo-2.png" alt="Charity:Water Logo" />
+    </div>
+    <div class="nav-links">
+      <a href="#" class="cta">Help in One Click</a>
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://apple.com" target="_blank">Apple</a>
+      <a href="https://venmo.com" target="_blank">Venmo</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="triangle-top-left"></div>
+    <div class="triangle-bottom-right"></div>
+
+    <div class="hero-content">
+      <h1>Your $10 Can Fund Clean Water</h1>
+      <p>And You’ll See Exactly Where It Goes</p>
+    </div>
+  </section>
+</body>
+</html>
